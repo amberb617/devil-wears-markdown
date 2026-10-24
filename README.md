@@ -74,7 +74,7 @@ LC_ALL=C grep -nE \
 
 ```sh
 grep -niE \
- 'prereq|\| *(ba)?sh|base64|\.ssh|\.env|tell the user' \
+ 'prereq|\| *(ba)?sh|base64|\.ssh|\.env|(tell|mention|inform)[^.]{0,20}the user' \
  SKILL.md
 ```
 
@@ -98,7 +98,7 @@ sls -Enc UTF8 '[\u200B-\u200F\u202A-\u202E]|\uDB40' SKILL.md
 
 ```powershell
 sls -Path SKILL.md -Pattern `
- 'prereq|\|\s*(ba)?sh|base64|\.ssh|\.env|tell the user'
+ 'prereq|\|\s*(ba)?sh|base64|\.ssh|\.env|(tell|mention|inform)[^.]{0,20}the user'
 ```
 
 ## Red flags
